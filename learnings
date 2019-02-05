@@ -1,0 +1,57 @@
+Learnings:
+
+"Day 1 part 1": https://adventofcode.com/2018/day/1
+Problem: Sum a list of newline delimited integers in input.txt
+1) How to read a file by line (while, `read`, `-n` not null, `[[ ]]` test construct, etc.)
+2) Defining and using variables
+3) Arithmetic expansion and evaluation
+4) Whitespace matters a lot in variable definitions, possibly many other places
+
+"Day 1 part 2": https://adventofcode.com/2018/day/1
+Problem: While summing a list of newline delimited integers in input.txt, if your current sum is a sum that has appeared before, print it. If you reach the end of input without a match, start over from the beginning of input."
+5) Defining arrays
+6) Pushing arrays
+7) Dumping arrays
+8) If statements
+9) `=~` regex match
+10) `-z` is null
+
+This took forever
+```
+real    2694m48.503s
+user    574m39.483s
+sys     6m59.437s
+```
+
+"Day 2 part 1": https://adventofcode.com/2018/day/2
+Problem: From a list of strings, count how many strings have 2 of the same letter in them. Then count how many have 3 of the same letter. Multiply those 2 counts together.
+11) For a string, `grep -o .` breaks it into newlines, `sort` sorts, `uniq -c` counts occurances, `grep 2` gets 2 occurances, `wc -l` returns how many lines of occurances.
+12) Basic functions.
+
+"Day 2 part 2": https://adventofcode.com/2018/day/2
+Problem: From a list of strings, find the 2 strings that differ by one letter.
+13) Substrings
+
+"Day 3 part 1": https://adventofcode.com/2018/day/3
+Problem: Given a list of coordinates for rectangles in a grid, how many square inches of rectangles overlap at least one other rectangle?
+14) More awk and cut
+
+This also took a long time
+```
+real    49m59.924s
+user    25m46.559s
+sys     29m2.414s
+```
+
+"Day3 part 2": https://adventofcode.com/2018/day/3
+Problem: Given a list of coordinates for rectangles in a grid, what is the only rectangle that doesn't overlap with any other rectangles?
+15) Collision detection math
+
+"Day4 part 1": https://adventofcode.com/2018/day/4
+Problem: Given an unordered list of beginning and end times, sort the list by timestamps. Then, associate these start and end times with a corresponding person ID. Then, find the person with the longest total time "spans" (cumulative time between start and end). Then, for that person, find the minute during which the most time "spans" overlap.
+16) sort
+17) noop ":"
+
+Helpful websites:
+https://explainshell.com/
+https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/bash.sh
