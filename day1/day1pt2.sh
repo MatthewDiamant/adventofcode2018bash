@@ -3,7 +3,6 @@
 FREQ=0
 SEENSUMS=(0)
 RESULT=
-LOOPS=0
 
 while [[ -z $RESULT ]]; do
 	while IFS='' read -r line || [[ -n "$line" ]]; do
@@ -13,7 +12,6 @@ while [[ -z $RESULT ]]; do
 		fi
 		SEENSUMS+=("$FREQ")
 	done < "input1.txt"
-	echo $((++LOOPS))
 done
 
 echo $RESULT

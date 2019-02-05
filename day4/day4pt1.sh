@@ -1,7 +1,6 @@
 #!/bin/bash
 
 FILE="input4.txt"
-# FILE="test-input.txt"
 
 function timeconvert {
   num=$(echo $1 | cut -d ":" -f2 | cut -d "]" -f1)
@@ -11,7 +10,6 @@ function timeconvert {
 sort $FILE > sortedinput.txt
 
 while IFS='' read -r line || [[ -n "$line" ]]; do
-  # echo $(timeconvert "$line")
   if [[ $line == *"begins shift"* ]]; then
     CURRENTGUARD=$(echo $line | cut -d "#" -f2 | cut -d " " -f1)
   elif [[ $line == *"falls asleep"* ]]; then
@@ -24,10 +22,6 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 done < "sortedinput.txt"
 
 SLEEPIEST=$(for i in "${!GUARDS[@]}"; do printf "%s\t%s\n" "$i" "${GUARDS[$i]}"; done | sort -k2 -g -r | head -n1 | cut -f1)
-
-echo $SLEEPIEST
-
-MINUTES=()
 
 while IFS='' read -r line || [[ -n "$line" ]]; do
   if [[ $line == *"begins shift"* ]]; then

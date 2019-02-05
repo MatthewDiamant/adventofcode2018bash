@@ -53,5 +53,6 @@ Problem: Given an unordered list of beginning and end times, sort the list by ti
 17) noop ":"
 
 Helpful websites:
-https://explainshell.com/
+http://www.tldp.org/LDP
+https://explainshell.com
 https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/bash.sh

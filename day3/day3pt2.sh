@@ -32,8 +32,6 @@ while IFS='' read -r BOX || [[ -n "$BOX" ]]; do
             COLLISION=1
         fi
 
-        # echo "Comparing $BOXINDEX and $COMPAREINDEX $(if [[ -n $COLLISION ]]; then echo COLLISION DETECTED; fi)"
-
       fi
 
     fi
@@ -47,5 +45,3 @@ while IFS='' read -r BOX || [[ -n "$BOX" ]]; do
 done < $TESTFILE
 
 echo $RESULT
-
-say "eueueueueueueue"
